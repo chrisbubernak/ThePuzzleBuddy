@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button *ngIf="showBack()" [routerLink]="['/index']">
+      <mat-icon>arrow_back</mat-icon>
+  </button>
+  <button mat-icon-button *ngIf="!showBack()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>The Puzzle Buddy</span>
+  <span class="example-spacer"></span>  
+  <mat-icon>settings</mat-icon>  
+</mat-toolbar>

@@ -1,0 +1,31 @@
+<mat-grid-list cols="3" rowHeight="100px">
+    <mat-grid-tile>
+        <mat-checkbox [(ngModel)]="northwest"></mat-checkbox>                
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-checkbox [(ngModel)]="north"></mat-checkbox>            
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-checkbox [(ngModel)]="northeast"></mat-checkbox>                
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-checkbox [(ngModel)]="west"></mat-checkbox>            
+    </mat-grid-tile>
+    <mat-grid-tile>
+       A
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-checkbox [(ngModel)]="east"></mat-checkbox>                
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-checkbox [(ngModel)]="southwest"></mat-checkbox>            
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-checkbox [(ngModel)]="south"></mat-checkbox>            
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-checkbox [(ngModel)]="southeast"></mat-checkbox>            
+    </mat-grid-tile>
+</mat-grid-list>
+<button mat-button color="primary" (click)="solve()">Solve</button>
+<div>{{answer}}</div>
