@@ -2,9 +2,13 @@
   flex: 1 1 auto;
 }
 
-button,
+mat-form-field,
+.button-group {
+  margin:0 auto;  
+  display: block;  
+}
+
 div {
-  margin:0 auto;
   display: block;
   text-align: center
 }
