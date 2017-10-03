@@ -4,7 +4,7 @@ import { SemaphoreService } from './semaphore.service';
 @Component({
   selector: 'semaphore',
   templateUrl: './semaphore.component.html',
-  styleUrls: ['./semaphore.component.css'],
+  styleUrls: ['./app.component.css'],
   providers: [SemaphoreService]
 })
 export class SemaphoreComponent {

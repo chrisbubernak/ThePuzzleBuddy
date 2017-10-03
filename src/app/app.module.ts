@@ -7,8 +7,8 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ListComponent } from './list.component';
-import { SemaphoreComponent } from './solvers/Semaphore.component';
-import { SemaphoreService } from './solvers/Semaphore.service';
+import { SemaphoreComponent } from './semaphore.component';
+import { SemaphoreService } from './semaphore.service';
 import { SolverComponent } from './solver.component';
 import { ToolBarComponent } from './toolbar.component';
 
