@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatIconModule, MatGridListModule, MatCheckboxModule, MatToolbarModule, NoConflictStyleCompatibilityMode} from '@angular/material';
+import { MatButtonModule, MatIconModule, MatInputModule, MatGridListModule, MatCheckboxModule, MatToolbarModule, NoConflictStyleCompatibilityMode} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -45,6 +45,7 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatGridListModule,
     MatIconModule,
+    MatInputModule,    
     MatCheckboxModule,
     MatToolbarModule,
     NoConflictStyleCompatibilityMode

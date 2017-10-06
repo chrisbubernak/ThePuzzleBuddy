@@ -1,31 +1,40 @@
 <mat-grid-list cols="3" rowHeight="100px">
     <mat-grid-tile>
-        <mat-checkbox [(ngModel)]="northwest"></mat-checkbox>                
+        <mat-checkbox [(ngModel)]="northwest" (change)="check()"></mat-checkbox>                
     </mat-grid-tile>
     <mat-grid-tile>
-        <mat-checkbox [(ngModel)]="north"></mat-checkbox>            
+        <mat-checkbox [(ngModel)]="north" (change)="check()"></mat-checkbox>            
     </mat-grid-tile>
     <mat-grid-tile>
-        <mat-checkbox [(ngModel)]="northeast"></mat-checkbox>                
+        <mat-checkbox [(ngModel)]="northeast" (change)="check()"></mat-checkbox>                
     </mat-grid-tile>
     <mat-grid-tile>
-        <mat-checkbox [(ngModel)]="west"></mat-checkbox>            
+        <mat-checkbox [(ngModel)]="west" (change)="check()"></mat-checkbox>            
     </mat-grid-tile>
     <mat-grid-tile>
-       A
+       {{current}}
     </mat-grid-tile>
     <mat-grid-tile>
-        <mat-checkbox [(ngModel)]="east"></mat-checkbox>                
+        <mat-checkbox [(ngModel)]="east" (change)="check()"></mat-checkbox>                
     </mat-grid-tile>
     <mat-grid-tile>
-        <mat-checkbox [(ngModel)]="southwest"></mat-checkbox>            
+        <mat-checkbox [(ngModel)]="southwest" (change)="check()"></mat-checkbox>            
     </mat-grid-tile>
     <mat-grid-tile>
-        <mat-checkbox [(ngModel)]="south"></mat-checkbox>            
+        <mat-checkbox [(ngModel)]="south" (change)="check()"></mat-checkbox>            
     </mat-grid-tile>
     <mat-grid-tile>
-        <mat-checkbox [(ngModel)]="southeast"></mat-checkbox>            
+        <mat-checkbox [(ngModel)]="southeast" (change)="check()"></mat-checkbox>            
     </mat-grid-tile>
 </mat-grid-list>
-<button mat-button color="primary" (click)="solve()">Solve</button>
-<div>{{answer}}</div>
+<div class="button-group">
+    <button mat-icon-button color="primary" (click)="add()">
+        <mat-icon>add</mat-icon>    
+    </button>
+    <button mat-icon-button color="primary" (click)="remove()">
+        <mat-icon>undo</mat-icon>    
+    </button>
+</div>
+<mat-form-field>
+    <input matInput [(value)]="answer">
+</mat-form-field>

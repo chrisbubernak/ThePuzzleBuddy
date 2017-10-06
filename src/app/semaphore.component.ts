@@ -17,11 +17,37 @@ export class SemaphoreComponent {
     southeast = false;
     south = false;
 
-    constructor(private readonly semaphoreService: SemaphoreService) {}
-
-    solve() {
-        this.answer += this.semaphoreService.solve([this.northwest, this.north, this.northeast, this.west, this.east, this.southwest, this.south, this.southeast]);
-    }
+    current = "";
 
     answer = "";
+    
+    constructor(private readonly semaphoreService: SemaphoreService) {}
+
+    check() {
+        this.current = this.semaphoreService.solve(
+            [this.northwest, this.north, this.northeast, this.west, this.east, this.southwest,this.south, this.southeast]);
+    }
+
+    clear() {
+        this.north = false;
+        this.northwest = false;
+        this.northeast = false;
+        this.west = false;
+        this.east = false;
+        this.southwest = false;
+        this.southeast = false;
+        this.south = false; 
+    }
+
+    add() {
+        this.answer += this.semaphoreService.solve(
+            [this.northwest, this.north, this.northeast, this.west, this.east, this.southwest,this.south, this.southeast]);
+        this.clear();
+    }
+
+    remove() {
+        if (this.answer.length === 0) return;
+
+        this.answer = this.answer.substr(0, this.answer.length - 1);
+    }
 }
