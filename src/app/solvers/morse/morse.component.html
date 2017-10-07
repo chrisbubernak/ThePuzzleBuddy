@@ -1,17 +1,24 @@
-<div>{{dotsAndDashes}} => {{current}}</div>
+<mat-grid-list cols="2" rowHeight="100px">
+    <mat-grid-tile>
+        {{dotsAndDashes}}                 
+    </mat-grid-tile>
+    <mat-grid-tile>
+        {{current}}
+    </mat-grid-tile>
+</mat-grid-list>
 <div class="button-group">
-    <button mat-button color="primary" (click)="click('.')">DOT</button>
-    <button mat-button color="primary" (click)="click('-')">DASH</button>    
+    <button mat-raised-button color="primary" (click)="click('.')">DOT</button>
+    <button mat-raised-button color="primary" (click)="click('-')">DASH</button>
+    <button mat-raised-button color="primary" (click)="clear()">CLEAR</button>    
 </div>
+<mat-form-field>
+    <input matInput [(ngModel)]="answer">
+</mat-form-field>
 <div class="button-group">
-    <button mat-icon-button color="primary" (click)="add()">
+    <button mat-icon-button color="primary" (click)="add()" [disabled]="!valid()">
         <mat-icon>add</mat-icon>    
     </button>
     <button mat-icon-button color="primary" (click)="remove()">
         <mat-icon>undo</mat-icon>    
     </button>
-</div>
-<mat-form-field>
-    <input matInput [(value)]="answer">
-</mat-form-field>
-    
+</div>    

@@ -25,6 +25,9 @@
         <mat-checkbox [(ngModel)]="botRight" (change)="check()"></mat-checkbox>            
     </mat-grid-tile>
 </mat-grid-list>
+<mat-form-field>
+    <input matInput [(ngModel)]="answer">
+</mat-form-field>
 <div class="button-group">
     <button mat-icon-button color="primary" (click)="add()" [disabled]="!valid()">
         <mat-icon>add</mat-icon>    
@@ -33,6 +36,3 @@
         <mat-icon>undo</mat-icon>    
     </button>
 </div>
-<mat-form-field>
-    <input matInput [(value)]="answer">
-</mat-form-field>

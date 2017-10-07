@@ -16,15 +16,20 @@ export class MorseComponent {
     
     constructor(private readonly morseService: MorseService) {}
 
-    click(newChar: string) {
-        this.dotsAndDashes += newChar;
-        this.current = this.morseService.solve(this.dotsAndDashes);
-    }
-
     add() {
         this.answer += this.morseService.solve(this.dotsAndDashes);
         this.current = "";
         this.dotsAndDashes = "";
+    }
+
+    clear() {
+        this.dotsAndDashes = "";
+        this.current = "";
+    }
+
+    click(newChar: string) {
+        this.dotsAndDashes += newChar;
+        this.current = this.morseService.solve(this.dotsAndDashes);
     }
 
     remove() {
