@@ -7,10 +7,10 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ListComponent } from './list.component';
-import { BrailleComponent } from './braille.component';
-import { BrailleService } from './braille.service';
-import { SemaphoreComponent } from './semaphore.component';
-import { SemaphoreService } from './semaphore.service';
+import { BrailleComponent } from './solvers/braille/braille.component';
+import { BrailleService } from './solvers/braille/braille.service';
+import { SemaphoreComponent } from './solvers/semaphore/semaphore.component';
+import { SemaphoreService } from './solvers/semaphore/semaphore.service';
 import { SolverComponent } from './solver.component';
 import { ToolBarComponent } from './toolbar.component';
 
@@ -41,7 +41,6 @@ const appRoutes: Routes = [
   imports: [
     RouterModule.forRoot(
       appRoutes,
-      //{ enableTracing: true } // <-- debugging purposes only
     ),
     BrowserAnimationsModule,
     BrowserModule,

@@ -4,7 +4,7 @@ import { BrailleService } from './braille.service';
 @Component({
   selector: 'braille',
   templateUrl: './braille.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['../../app.component.css'],
   providers: [BrailleService]
 })
 export class BrailleComponent {

@@ -1,0 +1,14 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-form-field,
+.button-group {
+  margin:0 auto;  
+  display: block;  
+}
+
+div {
+  display: block;
+  text-align: center
+}
