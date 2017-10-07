@@ -1,7 +1,9 @@
-<mat-grid-list cols="2" rowHeight="100px">
+<mat-grid-list cols="3" rowHeight="100px">
     <mat-grid-tile>
         <mat-checkbox [(ngModel)]="topLeft" (change)="check()"></mat-checkbox>                
     </mat-grid-tile>
+    <mat-grid-tile>
+    </mat-grid-tile>                    
     <mat-grid-tile>
         <mat-checkbox [(ngModel)]="topRight" (change)="check()"></mat-checkbox>            
     </mat-grid-tile>
@@ -9,17 +11,22 @@
         <mat-checkbox [(ngModel)]="midLeft" (change)="check()"></mat-checkbox>                
     </mat-grid-tile>
     <mat-grid-tile>
+        {{current}}
+    </mat-grid-tile>    
+    <mat-grid-tile>
         <mat-checkbox [(ngModel)]="midRight" (change)="check()"></mat-checkbox>            
     </mat-grid-tile>
     <mat-grid-tile>
         <mat-checkbox [(ngModel)]="botLeft" (change)="check()"></mat-checkbox>                
     </mat-grid-tile>
     <mat-grid-tile>
+    </mat-grid-tile>    
+    <mat-grid-tile>
         <mat-checkbox [(ngModel)]="botRight" (change)="check()"></mat-checkbox>            
     </mat-grid-tile>
 </mat-grid-list>
 <div class="button-group">
-    <button mat-icon-button color="primary" (click)="add()">
+    <button mat-icon-button color="primary" (click)="add()" [disabled]="!valid()">
         <mat-icon>add</mat-icon>    
     </button>
     <button mat-icon-button color="primary" (click)="remove()">

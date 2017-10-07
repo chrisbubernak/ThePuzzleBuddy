@@ -33,6 +33,8 @@ export class BrailleComponent {
         this.midRight = false;
         this.botLeft = false;
         this.botRight = false;
+
+        this.current = "";
     }
 
     add() {
@@ -44,5 +46,9 @@ export class BrailleComponent {
     remove() {
         if (this.answer.length === 0) return;
         this.answer = this.answer.substr(0, this.answer.length - 1);
+    }
+
+    valid(): boolean {
+        return this.current !== '#' && this.current !== '';
     }
 }
