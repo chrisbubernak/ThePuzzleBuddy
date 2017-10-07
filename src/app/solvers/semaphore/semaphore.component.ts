@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SemaphoreService } from './semaphore.service';
+import { Solver } from '../common/solver.interface';
 
 @Component({
   selector: 'semaphore',
@@ -7,7 +8,7 @@ import { SemaphoreService } from './semaphore.service';
   styleUrls: ['../../app.component.css'],
   providers: [SemaphoreService]
 })
-export class SemaphoreComponent {
+export class SemaphoreComponent implements Solver {
     north = false;
     northwest = false;
     northeast = false;

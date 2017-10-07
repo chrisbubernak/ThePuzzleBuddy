@@ -5,7 +5,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
+import { AddRemoveComponent } from './solvers/common/addRemove.component';
 import { AppComponent } from './app.component';
+import { AsciiComponent } from './solvers/ascii/ascii.component';
+import { AsciiService } from './solvers/ascii/ascii.service';
 import { ListComponent } from './list.component';
 import { BrailleComponent } from './solvers/braille/braille.component';
 import { BrailleService } from './solvers/braille/braille.service';
@@ -17,6 +20,7 @@ import { SolverComponent } from './solver.component';
 import { ToolBarComponent } from './toolbar.component';
 
 const appRoutes: Routes = [
+  { path: 'ascii', component: AsciiComponent },
   { path: 'braille', component: BrailleComponent },
   { path: 'morse', component: MorseComponent },   
   { path: 'semaphore', component: SemaphoreComponent },   
@@ -34,7 +38,9 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
+    AddRemoveComponent,
     AppComponent,
+    AsciiComponent,
     BrailleComponent,
     ListComponent,
     MorseComponent,
@@ -57,7 +63,7 @@ const appRoutes: Routes = [
     MatToolbarModule,
     NoConflictStyleCompatibilityMode
   ],
-  providers: [BrailleService, MorseService, SemaphoreService],
+  providers: [AsciiService, BrailleService, MorseService, SemaphoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

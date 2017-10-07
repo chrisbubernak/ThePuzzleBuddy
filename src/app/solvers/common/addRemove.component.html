@@ -1,0 +1,8 @@
+<div class="button-group">
+    <button mat-icon-button color="primary" (click)="solver.add()" [disabled]="!solver.valid()">
+        <mat-icon>add</mat-icon>    
+    </button>
+    <button mat-icon-button color="primary" (click)="solver.remove()">
+        <mat-icon>undo</mat-icon>    
+    </button>
+</div>

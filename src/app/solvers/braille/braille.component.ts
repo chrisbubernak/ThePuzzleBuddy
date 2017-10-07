@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BrailleService } from './braille.service';
+import { Solver } from '../common/solver.interface';
 
 @Component({
   selector: 'braille',
@@ -7,7 +8,7 @@ import { BrailleService } from './braille.service';
   styleUrls: ['../../app.component.css'],
   providers: [BrailleService]
 })
-export class BrailleComponent {
+export class BrailleComponent implements Solver {
     topLeft = false;
     topRight = false;
     midLeft = false;

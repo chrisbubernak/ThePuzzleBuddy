@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MorseService } from './morse.service';
+import { Solver } from '../common/solver.interface';
 
 @Component({
   selector: 'morse',
@@ -7,7 +8,7 @@ import { MorseService } from './morse.service';
   styleUrls: ['../../app.component.css'],
   providers: [MorseService]
 })
-export class MorseComponent {
+export class MorseComponent implements Solver {
     dotsAndDashes = "";
 
     current = "";

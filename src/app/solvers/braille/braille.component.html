@@ -28,11 +28,5 @@
 <mat-form-field>
     <input matInput [(ngModel)]="answer">
 </mat-form-field>
-<div class="button-group">
-    <button mat-icon-button color="primary" (click)="add()" [disabled]="!valid()">
-        <mat-icon>add</mat-icon>    
-    </button>
-    <button mat-icon-button color="primary" (click)="remove()">
-        <mat-icon>undo</mat-icon>    
-    </button>
-</div>
+<add-remove [solver]="this">
+</add-remove>

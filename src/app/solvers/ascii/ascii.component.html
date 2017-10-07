@@ -1,0 +1,20 @@
+<mat-grid-list cols="2" rowHeight="100px">
+    <mat-grid-tile>
+        {{number}}
+    </mat-grid-tile>
+    <mat-grid-tile>
+        {{current}}
+    </mat-grid-tile>                    
+</mat-grid-list>
+<mat-grid-list cols="3" rowHeight="55px">     
+   <mat-grid-tile *ngFor="let number of numbers">   
+        <button *ngIf="number !== undefined" mat-mini-fab color="primary" (click)="click(number)">
+           {{number}}
+        </button>
+    </mat-grid-tile>
+</mat-grid-list>
+   <mat-form-field>
+    <input matInput [(ngModel)]="answer">
+</mat-form-field>
+<add-remove [solver]="this">
+</add-remove>
