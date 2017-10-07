@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ListComponent } from './list.component';
+import { BrailleComponent } from './braille.component';
+import { BrailleService } from './braille.service';
 import { SemaphoreComponent } from './semaphore.component';
 import { SemaphoreService } from './semaphore.service';
 import { SolverComponent } from './solver.component';
@@ -14,7 +16,8 @@ import { ToolBarComponent } from './toolbar.component';
 
 const appRoutes: Routes = [
   { path: 'solver', component: SolverComponent },
-  { path: 'semaphore', component: SemaphoreComponent },  
+  { path: 'semaphore', component: SemaphoreComponent }, 
+  { path: 'braille', component: BrailleComponent },    
   {
     path: 'index',
     component: ListComponent,
@@ -29,6 +32,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    BrailleComponent,
     ListComponent,
     SemaphoreComponent,
     SolverComponent,
@@ -50,7 +54,7 @@ const appRoutes: Routes = [
     MatToolbarModule,
     NoConflictStyleCompatibilityMode
   ],
-  providers: [SemaphoreService],
+  providers: [BrailleService, SemaphoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
