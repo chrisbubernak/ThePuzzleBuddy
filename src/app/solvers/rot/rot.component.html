@@ -1,0 +1,11 @@
+<div class="button-group">
+    <mat-form-field>
+        <input matInput [(ngModel)]="input">
+    </mat-form-field>
+<button mat-mini-fab color="primary" (click)="click(-1)">-</button>
+    {{n}}
+<button mat-mini-fab color="primary" (click)="click(1)">+</button>
+</div>
+<mat-form-field>
+    <input matInput [(ngModel)]="answer">
+</mat-form-field>

@@ -13,6 +13,7 @@ export class ListComponent {
     {text: 'Anagram', cols: 1, rows: 1, color: '#DDBDF1', url: '/solver'},
     {text: 'Braille', cols: 1, rows: 1, color: 'lightpink', url: '/braille'},
     {text: 'Binary', cols: 1, rows: 1, color: 'lightblue', url: '/solver'},
-    {text: 'Pigpen', cols: 1, rows: 1, color: 'lightgreen', url: '/solver'},    
+    {text: 'Pigpen', cols: 1, rows: 1, color: 'lightgreen', url: '/solver'}, 
+    {text: 'Rot', cols: 1, rows: 1, color: '#DDBDF1', url: '/rot'},        
   ];
 }

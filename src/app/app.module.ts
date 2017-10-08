@@ -14,6 +14,8 @@ import { BrailleComponent } from './solvers/braille/braille.component';
 import { BrailleService } from './solvers/braille/braille.service';
 import { MorseComponent } from './solvers/morse/morse.component';
 import { MorseService } from './solvers/morse/morse.service';
+import { RotComponent } from './solvers/rot/rot.component';
+import { RotService } from './solvers/rot/rot.service';
 import { SemaphoreComponent } from './solvers/semaphore/semaphore.component';
 import { SemaphoreService } from './solvers/semaphore/semaphore.service';
 import { SolverComponent } from './solver.component';
@@ -23,6 +25,7 @@ const appRoutes: Routes = [
   { path: 'ascii', component: AsciiComponent },
   { path: 'braille', component: BrailleComponent },
   { path: 'morse', component: MorseComponent },   
+  { path: 'rot', component: RotComponent },     
   { path: 'semaphore', component: SemaphoreComponent },   
   { path: 'solver', component: SolverComponent },
   {
@@ -44,6 +47,7 @@ const appRoutes: Routes = [
     BrailleComponent,
     ListComponent,
     MorseComponent,
+    RotComponent,
     SemaphoreComponent,
     SolverComponent,
     ToolBarComponent,
@@ -63,7 +67,7 @@ const appRoutes: Routes = [
     MatToolbarModule,
     NoConflictStyleCompatibilityMode
   ],
-  providers: [AsciiService, BrailleService, MorseService, SemaphoreService],
+  providers: [AsciiService, BrailleService, MorseService, RotService, SemaphoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

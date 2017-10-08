@@ -9,7 +9,7 @@ import { Solver } from '../common/solver.interface';
   providers: [AsciiService]
 })
 export class AsciiComponent implements Solver {
-    numbers = [1 ,2 , 3 , 4 , 5 , 6 , 7 , 8 , 9, undefined, 0, undefined];
+    buttons = [1 ,2 , 3 , 4 , 5 , 6 , 7 , 8 , 9, undefined, 0, 'X'];
 
     number = "";
 
@@ -23,7 +23,11 @@ export class AsciiComponent implements Solver {
         this.current = "";
     }
 
-    click(num: number) {
+    click(num: number|string) {
+        if (num === 'X') {
+            this.clear();
+            return;
+        }
         this.number += num.toString();
         this.current = this.asciiService.solve(Number(this.number));
     }

@@ -6,14 +6,14 @@
         {{current}}
     </mat-grid-tile>                    
 </mat-grid-list>
-<mat-grid-list cols="3" rowHeight="55px">     
-   <mat-grid-tile *ngFor="let number of numbers">   
-        <button *ngIf="number !== undefined" mat-mini-fab color="primary" (click)="click(number)">
-           {{number}}
+<mat-grid-list cols="3" rowHeight="60px">     
+   <mat-grid-tile *ngFor="let button of buttons">   
+        <button *ngIf="button !== undefined" mat-mini-fab color="primary" (click)="click(button)">
+           {{button}}
         </button>
     </mat-grid-tile>
-</mat-grid-list>
-   <mat-form-field>
+</mat-grid-list>     
+<mat-form-field>
     <input matInput [(ngModel)]="answer">
 </mat-form-field>
 <add-remove [solver]="this">
