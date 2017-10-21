@@ -7,13 +7,13 @@ import { Component } from '@angular/core';
 })
 export class ListComponent {
   tiles = [
+    {text: 'Anagram', cols: 1, rows: 1, color: '#DDBDF1', url: '/anagram'},    
     {text: 'Ascii', cols: 1, rows: 1, color: 'lightblue', url: '/ascii'},
+    {text: 'Binary', cols: 1, rows: 1, color: 'lightblue', url: '/binary'},    
+    {text: 'Braille', cols: 1, rows: 1, color: 'lightpink', url: '/braille'},    
     {text: 'Morse', cols: 1, rows: 1, color: 'lightgreen', url: '/morse'},
+    {text: 'Pigpen', cols: 1, rows: 1, color: 'lightgreen', url: '/pigpen'},  
+    {text: 'Rot', cols: 1, rows: 1, color: '#DDBDF1', url: '/rot'},            
     {text: 'Semaphore', cols: 1, rows: 1, color: 'lightpink', url: '/semaphore'},
-    {text: 'Anagram', cols: 1, rows: 1, color: '#DDBDF1', url: '/solver'},
-    {text: 'Braille', cols: 1, rows: 1, color: 'lightpink', url: '/braille'},
-    {text: 'Binary', cols: 1, rows: 1, color: 'lightblue', url: '/solver'},
-    {text: 'Pigpen', cols: 1, rows: 1, color: 'lightgreen', url: '/solver'}, 
-    {text: 'Rot', cols: 1, rows: 1, color: '#DDBDF1', url: '/rot'},        
   ];
 }

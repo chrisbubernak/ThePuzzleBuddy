@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 
 import { AddRemoveComponent } from './solvers/common/addRemove.component';
 import { AppComponent } from './app.component';
+import { AnagramComponent } from './solvers/anagram/anagram.component';
+import { AnagramService } from './solvers/anagram/anagram.service';
 import { AsciiComponent } from './solvers/ascii/ascii.component';
 import { AsciiService } from './solvers/ascii/ascii.service';
 import { ListComponent } from './list.component';
@@ -22,12 +24,12 @@ import { SolverComponent } from './solver.component';
 import { ToolBarComponent } from './toolbar.component';
 
 const appRoutes: Routes = [
+  { path: 'anagram', component: AnagramComponent },  
   { path: 'ascii', component: AsciiComponent },
   { path: 'braille', component: BrailleComponent },
   { path: 'morse', component: MorseComponent },   
   { path: 'rot', component: RotComponent },     
   { path: 'semaphore', component: SemaphoreComponent },   
-  { path: 'solver', component: SolverComponent },
   {
     path: 'index',
     component: ListComponent,
@@ -36,13 +38,14 @@ const appRoutes: Routes = [
     redirectTo: '/index',
     pathMatch: 'full'
   },
-  //{ path: '**', component: PageNotFoundComponent }
+  { path: '**', component: SolverComponent }
 ];
 
 @NgModule({
   declarations: [
     AddRemoveComponent,
     AppComponent,
+    AnagramComponent,
     AsciiComponent,
     BrailleComponent,
     ListComponent,
@@ -67,7 +70,7 @@ const appRoutes: Routes = [
     MatToolbarModule,
     NoConflictStyleCompatibilityMode
   ],
-  providers: [AsciiService, BrailleService, MorseService, RotService, SemaphoreService],
+  providers: [AnagramService, AsciiService, BrailleService, MorseService, RotService, SemaphoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
